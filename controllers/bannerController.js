@@ -25,7 +25,7 @@ const updateBanner = (req, res) => {
 const createBanner = (req, res) => {
   const { id, description, is_visible, timer, link } = req.body;
 
-  // Validate input
+
   if (id == null || !description || is_visible == null || timer == null || !link) {
     return res.status(400).json({ error: 'All fields are required.' });
   }
